@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "foxpoc1"
+		},
+		"foxpoc1-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"foxpoc1-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://analyticsstorage1.dfs.core.windows.net"
+		}
+	}
+}
