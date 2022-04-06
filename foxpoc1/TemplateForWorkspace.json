@@ -177,7 +177,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "12e8d3a9-8824-444e-af92-58969a9f949c"
+						"spark.autotune.trackingId": "5a8290e4-267a-4baf-88e1-545f8d3a7dad"
 					}
 				},
 				"metadata": {
@@ -331,7 +331,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "2487953a-a2ea-4adf-bfba-a0cecc107941"
+						"spark.autotune.trackingId": "f75d0b66-c600-4144-b077-059dea4e3e74"
 					}
 				},
 				"metadata": {
@@ -379,6 +379,30 @@
 						],
 						"outputs": [],
 						"execution_count": 6
+					},
+					{
+						"cell_type": "code",
+						"metadata": {
+							"jupyter": {
+								"source_hidden": false,
+								"outputs_hidden": false
+							},
+							"nteract": {
+								"transient": {
+									"deleting": false
+								}
+							},
+							"microsoft": {
+								"language": "sparksql"
+							}
+						},
+						"source": [
+							"%%sql \r\n",
+							"\r\n",
+							"insert into stg.student "
+						],
+						"outputs": [],
+						"execution_count": null
 					}
 				]
 			},
