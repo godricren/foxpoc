@@ -177,11 +177,14 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "12e8d3a9-8824-444e-af92-58969a9f949c"
+						"spark.autotune.trackingId": "0a0fc041-cf7b-453e-8858-1cb115981f26"
 					}
 				},
 				"metadata": {
 					"saveOutput": true,
+					"synapse_widget": {
+						"version": "0.1"
+					},
 					"enableDebugMode": false,
 					"kernelspec": {
 						"name": "synapse_pyspark",
@@ -203,7 +206,7 @@
 						"nodeCount": 10,
 						"cores": 8,
 						"memory": 56,
-						"automaticScaleJobs": false
+						"extraHeader": null
 					},
 					"sessionKeepAliveTimeout": 30
 				},
@@ -222,6 +225,7 @@
 							"create database stg \r\n",
 							"LOCATION '/data_warehouse/fox_stg.db/'"
 						],
+						"attachments": null,
 						"outputs": [],
 						"execution_count": 1
 					},
@@ -248,6 +252,7 @@
 							"show DATABASES\r\n",
 							""
 						],
+						"attachments": null,
 						"outputs": [],
 						"execution_count": 2
 					},
@@ -274,6 +279,7 @@
 							"use stg;\r\n",
 							"show tables"
 						],
+						"attachments": null,
 						"outputs": [],
 						"execution_count": 3
 					},
@@ -303,6 +309,7 @@
 							"using delta\r\n",
 							"location '/data_warehouse/fox_stg.db/student/'"
 						],
+						"attachments": null,
 						"outputs": [],
 						"execution_count": 4
 					}
@@ -331,11 +338,14 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "2487953a-a2ea-4adf-bfba-a0cecc107941"
+						"spark.autotune.trackingId": "024c5143-5e34-475b-8847-e143e3384b3a"
 					}
 				},
 				"metadata": {
 					"saveOutput": true,
+					"synapse_widget": {
+						"version": "0.1"
+					},
 					"enableDebugMode": false,
 					"kernelspec": {
 						"name": "synapse_pyspark",
@@ -357,7 +367,7 @@
 						"nodeCount": 10,
 						"cores": 8,
 						"memory": 56,
-						"automaticScaleJobs": false
+						"extraHeader": null
 					},
 					"sessionKeepAliveTimeout": 30
 				},
@@ -377,6 +387,7 @@
 							"values\r\n",
 							"(1,'Aaron','this is a text string')"
 						],
+						"attachments": null,
 						"outputs": [],
 						"execution_count": 6
 					}
