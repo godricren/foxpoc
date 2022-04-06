@@ -12,7 +12,7 @@
             "value": "analyticsstorage1"
         },
         "defaultDataLakeStorageFilesystemName": {
-            "value": "foxstorage"
+            "value": "uatstorage"
         },
         "sqlAdministratorLogin": {
             "value": "sqladminuser"
@@ -51,13 +51,13 @@
             "value": "southcentralus"
         },
         "storageRoleUniqueId": {
-            "value": "ddc6a71e-4a41-4cbc-b19f-4484ee5ce01c"
+            "value": "5ed0a75b-66fb-4e42-a12a-d31e9321d03c"
         },
         "isNewStorageAccount": {
             "value": false
         },
         "isNewFileSystemOnly": {
-            "value": false
+            "value": true
         },
         "adlaResourceId": {
             "value": ""
