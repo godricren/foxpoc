@@ -177,14 +177,11 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "0a0fc041-cf7b-453e-8858-1cb115981f26"
+						"spark.autotune.trackingId": "5a8290e4-267a-4baf-88e1-545f8d3a7dad"
 					}
 				},
 				"metadata": {
 					"saveOutput": true,
-					"synapse_widget": {
-						"version": "0.1"
-					},
 					"enableDebugMode": false,
 					"kernelspec": {
 						"name": "synapse_pyspark",
@@ -206,7 +203,7 @@
 						"nodeCount": 10,
 						"cores": 8,
 						"memory": 56,
-						"extraHeader": null
+						"automaticScaleJobs": false
 					},
 					"sessionKeepAliveTimeout": 30
 				},
@@ -225,7 +222,6 @@
 							"create database stg \r\n",
 							"LOCATION '/data_warehouse/fox_stg.db/'"
 						],
-						"attachments": null,
 						"outputs": [],
 						"execution_count": 1
 					},
@@ -252,7 +248,6 @@
 							"show DATABASES\r\n",
 							""
 						],
-						"attachments": null,
 						"outputs": [],
 						"execution_count": 2
 					},
@@ -279,7 +274,6 @@
 							"use stg;\r\n",
 							"show tables"
 						],
-						"attachments": null,
 						"outputs": [],
 						"execution_count": 3
 					},
@@ -309,7 +303,6 @@
 							"using delta\r\n",
 							"location '/data_warehouse/fox_stg.db/student/'"
 						],
-						"attachments": null,
 						"outputs": [],
 						"execution_count": 4
 					}
@@ -338,14 +331,11 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "024c5143-5e34-475b-8847-e143e3384b3a"
+						"spark.autotune.trackingId": "f75d0b66-c600-4144-b077-059dea4e3e74"
 					}
 				},
 				"metadata": {
 					"saveOutput": true,
-					"synapse_widget": {
-						"version": "0.1"
-					},
 					"enableDebugMode": false,
 					"kernelspec": {
 						"name": "synapse_pyspark",
@@ -367,7 +357,7 @@
 						"nodeCount": 10,
 						"cores": 8,
 						"memory": 56,
-						"extraHeader": null
+						"automaticScaleJobs": false
 					},
 					"sessionKeepAliveTimeout": 30
 				},
@@ -387,9 +377,32 @@
 							"values\r\n",
 							"(1,'Aaron','this is a text string')"
 						],
-						"attachments": null,
 						"outputs": [],
 						"execution_count": 6
+					},
+					{
+						"cell_type": "code",
+						"metadata": {
+							"jupyter": {
+								"source_hidden": false,
+								"outputs_hidden": false
+							},
+							"nteract": {
+								"transient": {
+									"deleting": false
+								}
+							},
+							"microsoft": {
+								"language": "sparksql"
+							}
+						},
+						"source": [
+							"%%sql \r\n",
+							"\r\n",
+							"insert into stg.student "
+						],
+						"outputs": [],
+						"execution_count": null
 					}
 				]
 			},
