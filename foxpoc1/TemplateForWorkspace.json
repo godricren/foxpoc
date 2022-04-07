@@ -136,26 +136,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('workspaceName'), '/Grant access')]",
-			"type": "Microsoft.Synapse/workspaces/sqlscripts",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"content": {
-					"query": "--In the master database\nCREATE LOGIN [xingliang.sun@accenture.com] FROM EXTERNAL PROVIDER;\n\n-- In your database\nCREATE USER alias FROM LOGIN [xingliang.sun@accenture.com];\n\nALTER ROLE db_owner ADD member alias; -- Type USER name from step 2",
-					"metadata": {
-						"language": "sql"
-					},
-					"currentConnection": {
-						"databaseName": "analytic_staging_prod",
-						"poolName": "Built-in"
-					},
-					"resultLimit": 5000
-				},
-				"type": "SqlQuery"
-			},
-			"dependsOn": []
-		},
-		{
 			"name": "[concat(parameters('workspaceName'), '/code1')]",
 			"type": "Microsoft.Synapse/workspaces/notebooks",
 			"apiVersion": "2019-06-01-preview",
@@ -177,7 +157,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "5a8290e4-267a-4baf-88e1-545f8d3a7dad"
+						"spark.autotune.trackingId": "3472e070-74fa-47a5-b4ab-37a852d477c6"
 					}
 				},
 				"metadata": {
@@ -331,7 +311,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "f75d0b66-c600-4144-b077-059dea4e3e74"
+						"spark.autotune.trackingId": "9f78aebe-c068-435c-882e-faf6cba67ec9"
 					}
 				},
 				"metadata": {
