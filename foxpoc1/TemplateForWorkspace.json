@@ -177,11 +177,14 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "851bca11-28fd-4737-9e13-baec880c762e"
+						"spark.autotune.trackingId": "0a0fc041-cf7b-453e-8858-1cb115981f26"
 					}
 				},
 				"metadata": {
 					"saveOutput": true,
+					"synapse_widget": {
+						"version": "0.1"
+					},
 					"enableDebugMode": false,
 					"kernelspec": {
 						"name": "synapse_pyspark",
@@ -203,7 +206,7 @@
 						"nodeCount": 10,
 						"cores": 8,
 						"memory": 56,
-						"automaticScaleJobs": false
+						"extraHeader": null
 					},
 					"sessionKeepAliveTimeout": 30
 				},
@@ -222,6 +225,7 @@
 							"create database stg \r\n",
 							"LOCATION '/data_warehouse/fox_stg.db/'"
 						],
+						"attachments": null,
 						"outputs": [],
 						"execution_count": 1
 					},
@@ -248,6 +252,7 @@
 							"show DATABASES\r\n",
 							""
 						],
+						"attachments": null,
 						"outputs": [],
 						"execution_count": 2
 					},
@@ -274,6 +279,7 @@
 							"use stg;\r\n",
 							"show tables"
 						],
+						"attachments": null,
 						"outputs": [],
 						"execution_count": 3
 					},
@@ -303,6 +309,7 @@
 							"using delta\r\n",
 							"location '/data_warehouse/fox_stg.db/student/'"
 						],
+						"attachments": null,
 						"outputs": [],
 						"execution_count": 4
 					}
@@ -331,7 +338,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "c84fa275-32a3-4107-8b07-d60d7fec5a98"
+						"spark.autotune.trackingId": "3b9ded16-847f-4426-80db-208947d11caa"
 					}
 				},
 				"metadata": {
@@ -356,8 +363,7 @@
 						"sparkVersion": "3.1",
 						"nodeCount": 10,
 						"cores": 8,
-						"memory": 56,
-						"automaticScaleJobs": false
+						"memory": 56
 					},
 					"sessionKeepAliveTimeout": 30
 				},
@@ -400,6 +406,72 @@
 							"%%sql \r\n",
 							"\r\n",
 							"insert into stg.student "
+						],
+						"outputs": [],
+						"execution_count": null
+					}
+				]
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/code3')]",
+			"type": "Microsoft.Synapse/workspaces/notebooks",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"nbformat": 4,
+				"nbformat_minor": 2,
+				"bigDataPool": {
+					"referenceName": "sparkpool",
+					"type": "BigDataPoolReference"
+				},
+				"sessionProperties": {
+					"driverMemory": "56g",
+					"driverCores": 8,
+					"executorMemory": "56g",
+					"executorCores": 8,
+					"numExecutors": 2,
+					"conf": {
+						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.minExecutors": "2",
+						"spark.dynamicAllocation.maxExecutors": "2",
+						"spark.autotune.trackingId": "fb459f59-97eb-4884-980c-580eaaa75ccc"
+					}
+				},
+				"metadata": {
+					"saveOutput": true,
+					"enableDebugMode": false,
+					"kernelspec": {
+						"name": "synapse_pyspark",
+						"display_name": "python"
+					},
+					"language_info": {
+						"name": "python"
+					},
+					"a365ComputeOptions": {
+						"id": "/subscriptions/79d0c17c-c289-49f0-8316-6a287d2ca49b/resourceGroups/I-6772-Analy_CN_could-RG/providers/Microsoft.Synapse/workspaces/foxpoc1/bigDataPools/sparkpool",
+						"name": "sparkpool",
+						"type": "Spark",
+						"endpoint": "https://foxpoc1.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpool",
+						"auth": {
+							"type": "AAD",
+							"authResource": "https://dev.azuresynapse.net"
+						},
+						"sparkVersion": "3.1",
+						"nodeCount": 10,
+						"cores": 8,
+						"memory": 56,
+						"automaticScaleJobs": false
+					},
+					"sessionKeepAliveTimeout": 30
+				},
+				"cells": [
+					{
+						"cell_type": "code",
+						"metadata": {},
+						"source": [
+							"for i in range(5)\r\n",
+							"print(i)"
 						],
 						"outputs": [],
 						"execution_count": null
