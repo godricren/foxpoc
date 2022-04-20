@@ -43,7 +43,7 @@
 				"nodeCount": 10,
 				"cores": 8,
 				"memory": 56,
-				"automaticScaleJobs": false
+				"extraHeader": null
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -63,6 +63,7 @@
 					"values\r\n",
 					"(1,'Aaron','this is a text string')"
 				],
+				"attachments": null,
 				"execution_count": 6
 			},
 			{
@@ -86,6 +87,7 @@
 					"\r\n",
 					"insert into stg.student "
 				],
+				"attachments": null,
 				"execution_count": null
 			}
 		]

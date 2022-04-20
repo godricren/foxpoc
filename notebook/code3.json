@@ -43,7 +43,7 @@
 				"nodeCount": 10,
 				"cores": 8,
 				"memory": 56,
-				"automaticScaleJobs": false
+				"extraHeader": null
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -54,6 +54,7 @@
 					"for i in range(5)\r\n",
 					"print(i)"
 				],
+				"attachments": null,
 				"execution_count": null
 			}
 		]
