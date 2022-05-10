@@ -13,8 +13,8 @@ jobs:
         - uses: azure/synapse-workspace-deployment@release-1.0
           with:
             TargetWorkspaceName: 'foxuat2'
-            TemplateFile: './foxpoc/template/template.json'
-            ParametersFile: 'foxpoc1/TemplateForWorkspace.json'
+            TemplateFile: 'foxpoc1/TemplateForWorkspace.json'
+            ParametersFile: 'foxpoc1/TemplateParametersForWorkspace.json'
             environment: 'Azure Public'
             resourceGroup: 'I-6772-Analy_CN_could-RG'
             clientId: ${{secrets.CLIENTID}}
