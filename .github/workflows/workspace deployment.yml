@@ -1,7 +1,7 @@
 name: workspace deployment
 
 on:
-    push:
+    push: 
         branches: [ workspace_publish ]
 - name: Synapse workspace deployment
   uses: Azure/Synapse-workspace-deployment@V1.5.0
