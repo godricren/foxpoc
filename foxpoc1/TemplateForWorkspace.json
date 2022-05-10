@@ -223,7 +223,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "d23fa482-447d-482f-87e5-44d1edc997bd"
+						"spark.autotune.trackingId": "d000d7e9-cc87-4547-b6cb-6418c7119975"
 					}
 				},
 				"metadata": {
@@ -241,7 +241,6 @@
 				"cells": [
 					{
 						"cell_type": "code",
-						"metadata": {},
 						"source": [
 							"print(curent)"
 						],
@@ -470,7 +469,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "5e3a2217-a84c-410a-9c8b-8420ada61a95"
+						"spark.autotune.trackingId": "a8179007-7369-4720-8607-cc87918e9cc9"
 					}
 				},
 				"metadata": {
@@ -488,8 +487,9 @@
 				"cells": [
 					{
 						"cell_type": "code",
+						"metadata": {},
 						"source": [
-							"2222222"
+							"333333"
 						],
 						"outputs": [],
 						"execution_count": null
