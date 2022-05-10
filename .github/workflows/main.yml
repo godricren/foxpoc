@@ -1,0 +1,26 @@
+name: workspace deployment
+
+on:
+    push:
+        branches: [ workspace_publish ]
+jobs:
+    release:
+        # You also can use the self-hosted runners.
+        runs-on: windows-latest
+        steps:
+        # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it.
+        - uses: actions/checkout@v2
+        - uses: azure/synapse-workspace-deployment@release-1.0
+        with:
+          TargetWorkspaceName: 'foxuat2'
+          TemplateFile: './template/template.json'
+          ParametersFile: './template/parameters.json'
+          OverrideArmParameters: 
+          environment: 'Azure Public'
+          resourceGroup: 'I-6772-Analy_CN_could-RG'
+          clientId: ${{secrets.CLIENTID}}
+          clientSecret:  ${{secrets.CLIENTSECRET}}
+          subscriptionId: '79d0c17c-c289-49f0-8316-6a287d2ca49b'
+          tenantId: '344bdfb4-c87b-4e12-89e0-df3d631d884d'
+          DeleteArtifactsNotInTemplate: 'true'
+          managedIdentity: 'False'
