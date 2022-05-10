@@ -3,23 +3,32 @@ name: workspace deployment
 on:
     push:
         branches: [ workspace_publish ]
-jobs:
-    release:
-        # You also can use the self-hosted runners.
-        runs-on: windows-latest
-        steps:
-        # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it.
-        - uses: actions/checkout@v2
-        - uses: azure/synapse-workspace-deployment@release-1.0
-        with:
-          TargetWorkspaceName: 'foxuat2'
-          TemplateFile: './foxpoc1/TemplateForWorkspace.json'
-          ParametersFile: './foxpoc1/TemplateParametersForWorkspace.json'
-          environment: 'Azure Public'
-          resourceGroup: 'I-6772-Analy_CN_could-RG'
-          clientId: ${{secrets.CLIENTID}}
-          clientSecret:  ${{secrets.CLIENTSECRET}}
-          subscriptionId: '79d0c17c-c289-49f0-8316-6a287d2ca49b'
-          tenantId: '344bdfb4-c87b-4e12-89e0-df3d631d884d'
-          DeleteArtifactsNotInTemplate: 'true'
-          managedIdentity: 'False'
+- name: Synapse workspace deployment
+  uses: Azure/Synapse-workspace-deployment@V1.5.0
+  with:
+    # Provide the Synapse workspace name where you want to deploy the artifacts.
+    TargetWorkspaceName: 'foxuat2'
+    # Specify the path to the workspace artifacts template.
+    TemplateFile: './foxpoc1/TemplateForWorkspace.json'
+    # Specify the path to the template parameter file.
+    ParametersFile: './foxpoc1/TemplateParametersForWorkspace.json'
+    # Specify deployment parameter values.
+    OverrideArmParameters: # optional, default is 
+    # Provide the type of cloud environment. Valid values are: Azure Public, Azure China, Azure US Government, Azure Germany
+    Environment: 'Azure Public'
+    # Provide the resource group of the target Synapse workspace.
+    resourceGroup: 'I-6772-Analy_CN_could-RG'
+    # Provide client id of service principal.
+    clientId: ${{secrets.CLIENTID}}
+    # Provide client secret of the service principal.
+    clientSecret: ${{secrets.CLIENTSECRET}}
+    # Provide subscription id.
+    subscriptionId: '79d0c17c-c289-49f0-8316-6a287d2ca49b'
+    # Provide tenant id.
+    tenantId: '344bdfb4-c87b-4e12-89e0-df3d631d884d'
+    # Delete the artifacts which are in the workspace but not in the template.
+    DeleteArtifactsNotInTemplate: # optional
+    # Use managed identity to generate the bearer token?
+    managedIdentity: # optional
+    # Deploy managed private endpoints in the template.
+    deployManagedPrivateEndpoint: # optional
