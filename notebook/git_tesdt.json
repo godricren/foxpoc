@@ -13,7 +13,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "f89df3ec-3f21-4256-9965-3ea3c03863d7"
+				"spark.autotune.trackingId": "18854fb2-64d8-4fbe-a3b9-86f2f6bbfd4e"
 			}
 		},
 		"metadata": {
@@ -32,7 +32,7 @@
 			{
 				"cell_type": "code",
 				"source": [
-					"print('this is a test')"
+					"print('this        a test')"
 				],
 				"execution_count": null
 			}
