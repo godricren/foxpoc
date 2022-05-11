@@ -559,7 +559,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "eae81929-be6e-4f50-bebe-0be3ddb05f7d"
+						"spark.autotune.trackingId": "25276cbe-c352-4735-9a21-e0f76797eb75"
 					}
 				},
 				"metadata": {
@@ -579,7 +579,7 @@
 						"cell_type": "code",
 						"metadata": {},
 						"source": [
-							"helelelelelelel"
+							"import pandas as pd "
 						],
 						"outputs": [],
 						"execution_count": null
